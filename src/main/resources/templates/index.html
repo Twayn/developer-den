@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" type="text/css" href="../static/css/topnav.css" th:href="@{/css/topnav.css}">
+    <link rel="stylesheet" type="text/css" href="../static/css/solid.css" th:href="@{/css/solid.css}">
+
+    <script src="../static/js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+    <script src="../static/js/topnav.js" th:src="@{/js/topnav.js}"></script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="javascript:showSolidPrinciples();">Solid</a>
+    <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+        <img src="../static/img/bars.svg" th:src="@{/img/bars.svg}" style="height: 17px; vertical-align: middle">
+    </a>
+</div>
+
+<div class="content" id ="content">
+    <H2 style="text-align: center">Альманах ООП</H2>
+    <H3 style="text-align: center">Принципы ООП</H3>
+
+    <div class = "oop-principle" th:onclick="showOopPrincipleContent([[${abstractionText}]])">
+        <div class = "oop-principle-title">
+            Абстракция
+        </div>
+        <img src="../static/img/abstract.svg" th:src="@{/img/abstract.svg}" class = "oop-principle-img">
+    </div>
+
+    <div class = "oop-principle" th:onclick="showOopPrincipleContent([[${polymorphismText}]])">
+        <div class = "oop-principle-title">
+            Полиморфизм
+        </div>
+        <img src="../static/img/poly.svg" th:src="@{/img/poly.svg}" class = "oop-principle-img">
+    </div>
+
+    <div class = "oop-principle" th:onclick="showOopPrincipleContent([[${inheritanceText}]])">
+        <div class = "oop-principle-title">
+            Наследование
+        </div>
+        <img src="../static/img/inheritance.svg" th:src="@{/img/inheritance.svg}" class = "oop-principle-img">
+    </div>
+
+    <div class = "oop-principle" th:onclick="showOopPrincipleContent([[${incapsulationText}]])">
+        <div class = "oop-principle-title">
+            Инкапсуляция
+        </div>
+        <img src="../static/img/incapsulation.svg" th:src="@{/img/incapsulation.svg}" class = "oop-principle-img">
+    </div>
+
+    <div class="oop-principle-content">
+        <p id="oopPrincipleText" style="display: none"> </p>
+    </div>
+</div>
+
+</body>
+</html>
