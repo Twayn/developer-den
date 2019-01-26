@@ -12,17 +12,17 @@
     border-radius: 10px;
 }
 
-.solid-principle:hover{
+.pr-hover:hover{
     border-style: groove;
     border-color: black;
     cursor: pointer;
 }
 
-.solid-inital{
+.principle-text{
     text-align: center;
     font-size: 3.5em;
     font-weight: bolder;
-    margin-top: 2.8vw;
+    margin-top: 2.6vw;
 }
 
 .s-inital{
@@ -91,9 +91,7 @@
     border-radius: 10px;
 }
 
-.principle-name{
-    text-align: center;
-    font-size: 3.5em;
-    font-weight: bolder;
-    margin-top: 2.8vw;
+.principles-divisor{
+    display: inline-block;
+    width: 15px;
 }

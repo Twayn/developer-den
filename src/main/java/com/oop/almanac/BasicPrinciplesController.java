@@ -5,15 +5,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class SolidController {
-	@GetMapping("/solid")
+public class BasicPrinciplesController {
+	@GetMapping("/basic_principles")
 	public String index(Model model) {
 		//model.addAttribute("arg", arg);
 //		model.addAttribute("abstractionText", abstractionText);
 //		model.addAttribute("polymorphismText", polymorphismText);
 //		model.addAttribute("inheritanceText", inheritanceText);
 //		model.addAttribute("incapsulationText", incapsulationText);
-		return "solid";
+		return "basic";
 	}
 
 //	private String abstractionText = "Abstraction is...";

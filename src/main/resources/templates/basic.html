@@ -1,0 +1,34 @@
+
+<H3 style="text-align: center">Принципы ООП</H3>
+
+<div class = "oop-principle" th:onclick="showOopPrincipleContent([[${abstractionText}]])">
+    <div class = "oop-principle-title">
+        Абстракция
+    </div>
+    <img src="../static/img/abstract.svg" th:src="@{/img/abstract.svg}" class = "oop-principle-img">
+</div>
+
+<div class = "oop-principle" th:onclick="showOopPrincipleContent([[${polymorphismText}]])">
+    <div class = "oop-principle-title">
+        Полиморфизм
+    </div>
+    <img src="../static/img/poly.svg" th:src="@{/img/poly.svg}" class = "oop-principle-img">
+</div>
+
+<div class = "oop-principle" th:onclick="showOopPrincipleContent([[${inheritanceText}]])">
+    <div class = "oop-principle-title">
+        Наследование
+    </div>
+    <img src="../static/img/inheritance.svg" th:src="@{/img/inheritance.svg}" class = "oop-principle-img">
+</div>
+
+<div class = "oop-principle" th:onclick="showOopPrincipleContent([[${incapsulationText}]])">
+    <div class = "oop-principle-title">
+        Инкапсуляция
+    </div>
+    <img src="../static/img/incapsulation.svg" th:src="@{/img/incapsulation.svg}" class = "oop-principle-img">
+</div>
+
+<div class="oop-principle-content">
+    <p id="oopPrincipleText" style="display: none"> </p>
+</div>
