@@ -5,10 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainController {
-	@GetMapping("/")
+public class OtherOopPrinciplesController {
+	@GetMapping("/other_oop_principles")
 	public String index(Model model) {
-//	  	(@RequestParam(name="arg", required=false, defaultValue="default") String arg, Model model) {
-		return "index";
+		return "other_oop_principles";
 	}
 }
