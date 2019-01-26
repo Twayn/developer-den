@@ -15,7 +15,19 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="javascript:showBasicPrinciples();" class="active">Basic</a>
+    <a href="javascript:void(0);">Developer Den</a>
+    <div class="dropdown">
+        <button class="dropbtn">
+            OOP
+            <i style="font-size: 12px">&#9660;</i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <a href="javascript:showBasicPrinciples();">Basic</a>
     <a href="javascript:showOtherPrinciples();">Others</a>
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
         <img src="../static/img/bars.svg" th:src="@{/img/bars.svg}" style="height: 17px; vertical-align: middle">
