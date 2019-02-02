@@ -6,32 +6,36 @@
 
     <link rel="stylesheet" type="text/css" href="../static/css/styles.css" th:href="@{/css/styles.css}">
     <link rel="stylesheet" type="text/css" href="../static/css/topnav.css" th:href="@{/css/topnav.css}">
+    <link rel="stylesheet" type="text/css" href="../static/css/sidenav.css" th:href="@{/css/sidenav.css}">
     <link rel="stylesheet" type="text/css" href="../static/css/solid.css" th:href="@{/css/solid.css}">
 
     <script src="../static/js/jquery-3.3.1.min.js" th:src="@{/js/jquery-3.3.1.min.js}"></script>
     <script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
     <script src="../static/js/topnav.js" th:src="@{/js/topnav.js}"></script>
+    <script src="../static/js/sidenav.js" th:src="@{/js/sidenav.js}"></script>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
     <a href="javascript:void(0);">Developer Den</a>
-    <div class="dropdown">
-        <button class="dropbtn">
-            OOP
-            <i style="font-size: 12px">&#9660;</i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-    </div>
     <a href="javascript:showBasicPrinciples();">Basic</a>
     <a href="javascript:showOtherPrinciples();">Others</a>
-    <a href="javascript:void(0);" class="icon" onclick="showMenu()">
-        <img src="../static/img/bars.svg" th:src="@{/img/bars.svg}" style="height: 17px; vertical-align: middle">
-    </a>
+</div>
+
+<div class="sidenav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#clients">Clients</a>
+    <a href="#contact">Contact</a>
+    <button class="dropdown-btn">Dropdown
+        <i style="font-size: 12px">&#9660;</i>
+    </button>
+    <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+    <a href="#contact">Search</a>
 </div>
 
 <div class="content" id ="content">
