@@ -1,11 +1,11 @@
 .sidenav {
     height: 100%;
-    width: 220px;
+    width: 210px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: blanchedalmond;
+    background-color: #5ab9ea;
     overflow-x: hidden;
     padding-top: 20px;
     margin-top: 47px;
@@ -27,7 +27,7 @@
 }
 
 .sidenav a:hover, .dropdown-btn:hover {
-    background-color: #ffc653;
+    background-color: #5680e9;
     color: black; /*font color*/
 }
 
@@ -44,7 +44,7 @@
 
 .dropdown-container {
     display: none;
-    background-color: #ffe225;
+    background-color: #84ceeb;
     padding-left: 8px;
 }
 
