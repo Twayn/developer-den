@@ -1,21 +1,22 @@
 .sidenav {
     height: 100%;
-    width: 200px;
+    width: 220px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: blanchedalmond;
     overflow-x: hidden;
     padding-top: 20px;
     margin-top: 47px;
+    border-top: 2px solid black;
 }
 
 .sidenav a, .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: black;
     display: block;
     border: none;
     background: none;
@@ -26,7 +27,8 @@
 }
 
 .sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
+    background-color: #ffc653;
+    color: black; /*font color*/
 }
 
 .main {
@@ -36,13 +38,13 @@
 }
 
 .active {
-    background-color: green;
-    color: white;
+    background-color: #ffc653;
+    color: black;
 }
 
 .dropdown-container {
     display: none;
-    background-color: #262626;
+    background-color: #ffe225;
     padding-left: 8px;
 }
 

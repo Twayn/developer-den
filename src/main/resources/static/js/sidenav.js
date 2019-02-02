@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    initSidenav();
+});
+
+function initSidenav() {
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
 
@@ -13,4 +17,4 @@ $(document).ready(function(){
             }
         });
     }
-});
+}
