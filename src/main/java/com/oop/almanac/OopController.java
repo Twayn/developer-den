@@ -4,9 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class OopPrinciplesController {
+public class OopController {
 	@GetMapping("/oop_sidenav")
-	public String basicSidenav() {
+	public String oopSidenav() {
 		return "oop_sidenav";
 	}
 

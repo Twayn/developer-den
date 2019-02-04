@@ -1,0 +1,149 @@
+<h2>Транзакции</h2>
+
+<p>
+    Одна из задач БД — поддержание целостного состояния — соответствия предметной области.<br>
+    При изменении данных БД должна переходить между целостными состояниями, учитывая параллельное изменение данных.<br>
+    Для обеспечения такого поведения существуют транзакции.
+</p>
+
+<p>
+    <span class="tooltip">
+        <span class="tooltiptext">Транзакция</span>
+        <span class="tooltiphint">Transaction</span>
+    </span> – это набор действий с БД, которые или выполняются успешно, или не выполняются совсем.
+</p>
+
+
+<p>Есть 4 основных свойства транзакций (ACID):</p>
+<ul>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Атомарность</span>
+            <span class="tooltiphint">Atomicity</span>
+        </span> – транзакция неделима, выполняются либо вся целиком, либо никак;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Согласованность</span>
+            <span class="tooltiphint">Consistency</span>
+        </span> – перевод БД между целостными состояниями. Внутри транзакции БД может быть несогласована;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Изоляция</span>
+            <span class="tooltiphint">Isolation</span>
+        </span> – изменения текущей транзакции видны только после их фиксации;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Долговечность</span>
+            <span class="tooltiphint">Durability</span>
+        </span> – изменения выполненной транзакцией сохраняются, вне зависимости от последующих обстоятельств.
+    </li>
+</ul>
+
+<p>
+    Для балансировки между скоростью выполнения транзакцией и ошибками параллельного доступа существуют уровни изоляции.
+</p>
+
+<p>
+    Уровень изолированности транзакций – степень допустимой несогласованности данных при параллельно выполняемых транзакциях.
+</p>
+
+<p>При параллельном выполнении транзакций возможны следующие проблемы:</p>
+<ul>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Потерянное обновление</span>
+            <span class="tooltiphint">Lost update</span>
+        </span> – при параллельном изменении данных оно учитывается только от части транзакций;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Грязное чтение</span>
+            <span class="tooltiphint">Dirty read</span>
+        </span> — учет данных, внесенных транзакцией, которая впоследствии откатится;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Неповторяющееся чтение</span>
+            <span class="tooltiphint">Non-repeatable read</span>
+        </span> — при повторном чтении поля его содержимое отличается;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Фантомное чтение</span>
+            <span class="tooltiphint">Phantom read</span>
+        </span> – повторное выполнение запроса дает другой состав полей.
+    </li>
+</ul>
+
+<p>Уровни изоляций:</p>
+<ul>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Чтение незафиксированных данных</span>
+            <span class="tooltiphint">read uncommitted</span>
+        </span> – гарантирует только отсутствие потерянных обновлений;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Чтение фиксированных данных</span>
+            <span class="tooltiphint">read committed</span>
+        </span> – в процессе транзакции сохраняются блокировки записи но не сохраняются чтения;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Повторяемое чтение</span>
+            <span class="tooltiphint">repeatable read</span>
+        </span> – прочитанные транзакцией данные не могут быть изменены;
+    </li>
+    <li>
+        <span class="tooltip">
+            <span class="tooltiptext">Упорядочиваемость</span>
+            <span class="tooltiphint">serializable</span>
+        </span> – результат параллельно выполняемых транзакций эквивалентен последовательному.
+    </li>
+</ul>
+
+<!--Чем выше уровень изоляции тем ниже скорость-->
+
+<table border="1" align="center">
+    <tbody>
+    <tr>
+        <th>Уровень изоляции</th>
+        <th>Фантомное<br>чтение</th>
+        <th>Неповторяемое<br>чтение</th>
+        <th>Грязное<br>чтение</th>
+        <th>Потерянное<br>обновление</th>
+    </tr>
+    <tr>
+        <td>Serializable</td>
+        <td>+</td>
+        <td>+</td>
+        <td>+</td>
+        <td>+</td>
+    </tr>
+    <tr>
+        <td>Repeatable read</td>
+        <td>-</td>
+        <td>+</td>
+        <td>+</td>
+        <td>+</td>
+    </tr>
+    <tr>
+        <td>Read commited</td>
+        <td>-</td>
+        <td>-</td>
+        <td>+</td>
+        <td>+</td>
+    </tr>
+    <tr>
+        <td>Read uncommited</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>+</td>
+    </tr>
+    </tbody>
+</table>
