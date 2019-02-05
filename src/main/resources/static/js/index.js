@@ -1,84 +1,41 @@
 $(document).ready(function(){
-    showSynopsis();
+    var url = window.location.pathname;
+    if (!url.includes('content')){
+        var path = url.substr(1);
+        showContent(path);
+    }
 });
 
-function showOOP() {
-    $.get("oop_sidenav", function(data, status){
+function showSidenav(sidenav_path) {
+    $.get('content/' + sidenav_path, function(data, status){
         document.getElementById('sidenav').innerHTML = data;
         initSidenav();
     });
 }
 
-function showAbstraction() {
-    $.get("stub", function(data, status){
-        document.getElementById('content').innerHTML = 'Abstraction is...';
+function showContent(content_path) {
+    $.get('content/' + content_path, function(data, status){
+        document.getElementById('content').innerHTML = data;
+        window.history.pushState("data", "title", "/"+content_path);
     });
 }
 
-function showPolymorphism() {
-    $.get("stub", function(data, status){
-        document.getElementById('content').innerHTML = 'Polymorphism is...';
-    });
-}
+$(window).on('popstate',function(event) {
+    var url = document.location.pathname; //document.location
+    alert(url);
+    if (!url.includes('content')){
+        var path = url.substr(1);
+        showContent2(path);
+    }
+});
 
-function showInheritance() {
-    $.get("stub", function(data, status){
-        document.getElementById('content').innerHTML = 'Inheritance is...';
-    });
-}
-
-function showIncapsulation() {
-    $.get("stub", function(data, status){
-        document.getElementById('content').innerHTML = 'Incapsulation is...';
-    });
-}
-
-function showDB() {
-    $.get("db_sidenav", function(data, status){
-        document.getElementById('sidenav').innerHTML = data;
-        initSidenav();
-    });
-}
-
-function showRelationDB() {
-    $.get("db", function(data, status){
+function showContent2(content_path) {
+    $.get('content/' + content_path, function(data, status){
         document.getElementById('content').innerHTML = data;
     });
 }
 
-function showKeys() {
-    $.get("keys", function(data, status){
-        document.getElementById('content').innerHTML = data;
-    });
-}
-
-function showNormalForms() {
-    $.get("normal_forms", function(data, status){
-        document.getElementById('content').innerHTML = data;
-    });
-}
-
-function showIndexes() {
-    $.get("indexes", function(data, status){
-        document.getElementById('content').innerHTML = data;
-    });
-}
-
-function showTransactions() {
-    $.get("transactions", function(data, status){
-        document.getElementById('content').innerHTML = data;
-    });
-}
-
-function showLocks() {
-    $.get("locks", function(data, status){
-        document.getElementById('content').innerHTML = data;
-    });
-}
-
-function showSynopsis() {
-    $.get("synopsis", function(data, status){
-        document.getElementById('content').innerHTML = data;
-    });
-}
-
+//FIXME prototype version
+//Do refactoring
+//Decide when use pushState
+//Improve path extraction from url
