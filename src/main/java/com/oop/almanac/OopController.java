@@ -12,8 +12,18 @@ public class OopController {
 		return "oop_sidenav";
 	}
 
-	@GetMapping("/stub")
-	public String stub() {
-		return "oop_sidenav";
+	@GetMapping("/oop")
+	public String oop() {
+		return "oop/oop";
+	}
+
+	@GetMapping("/details")
+	public String details() {
+		return "oop/details";
+	}
+
+	@GetMapping("/principles")
+	public String principles() {
+		return "oop/principles";
 	}
 }

@@ -22,7 +22,6 @@ function showContent(content_path) {
 
 $(window).on('popstate',function(event) {
     var url = document.location.pathname; //document.location
-    alert(url);
     if (!url.includes('content')){
         var path = url.substr(1);
         showContent2(path);

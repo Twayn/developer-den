@@ -23,12 +23,15 @@ body, html {
 details{
     font-size: 22px;
 }
+
 ul{
     margin-top:-15px;
 }
+
 h2{
     text-align: center;
 }
+
 td {
     text-align: center;
     vertical-align: middle;
@@ -70,6 +73,14 @@ td {
     visibility: visible;
 }
 
-.tooltiptext{
+.tooltiptext {
+    font-weight: bold;
+}
+
+details {
+    padding-left: 20px;
+}
+
+summary {
     font-weight: bold;
 }

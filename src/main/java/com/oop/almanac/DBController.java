@@ -14,31 +14,31 @@ public class DBController {
 
 	@GetMapping("/db")
 	public String db() {
-		return "db";
+		return "db/db";
 	}
 
 	@GetMapping("/keys")
 	public String keys() {
-		return "keys";
+		return "db/keys";
 	}
 
 	@GetMapping("/normal_forms")
 	public String normalForms() {
-		return "normal_forms";
+		return "db/normal_forms";
 	}
 
 	@GetMapping("/indexes")
 	public String indexes() {
-		return "indexes";
+		return "db/indexes";
 	}
 
 	@GetMapping("/transactions")
 	public String transactions() {
-		return "transactions";
+		return "db/transactions";
 	}
 
 	@GetMapping("/locks")
 	public String locks() {
-		return "locks";
+		return "db/locks";
 	}
 }
