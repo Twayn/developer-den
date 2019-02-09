@@ -1,7 +1,7 @@
 .topnav {
     overflow: hidden;
     background-color: #5ab9ea;
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
@@ -20,4 +20,16 @@
 .topnav a:hover {
     background-color: #5680e9;
     color: black; /*font color*/
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
 }

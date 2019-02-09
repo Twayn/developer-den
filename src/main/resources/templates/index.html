@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Developer Den</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" type="text/css" href="../static/css/index.css" th:href="@{/css/index.css}">
@@ -26,6 +26,9 @@
     <a href="javascript:void(0);">SQL</a>
     <a href="javascript:void(0);">Многопоточность</a>
     <a href="javascript:void(0);">Тестирование</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <img src="../static/img/bars.svg" th:src="@{/img/bars.svg}" style="height: 22px; vertical-align: middle">
+    </a>
 </div>
 
 <div class="sidenav" id = "sidenav">
@@ -35,6 +38,17 @@
 <div class="content" id ="content">
 
 </div>
+
+<!--<script>-->
+    <!--function myFunction() {-->
+        <!--var x = document.getElementById("myTopnav");-->
+        <!--if (x.className === "topnav") {-->
+            <!--x.className += " responsive";-->
+        <!--} else {-->
+            <!--x.className = "topnav";-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
 
 </body>
 </html>
