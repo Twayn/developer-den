@@ -33,3 +33,33 @@
         display: block;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        position: relative;
+        z-index: 2;
+        background-color: inherit;
+    }
+
+    .sidenav{
+        display: none;
+    }
+
+    .content{
+        margin: 50px 0 0 0;
+    }
+
+    .topnav.responsive a:hover {
+        background-color: #5680e9;
+        color: black; /*font color*/
+    }
+}
