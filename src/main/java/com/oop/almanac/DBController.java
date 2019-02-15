@@ -27,6 +27,11 @@ public class DBController {
 		return "db/normal_forms";
 	}
 
+	@GetMapping("/normal_forms_violation")
+	public String normalFormsViolation() {
+		return "db/normal_forms_violation";
+	}
+
 	@GetMapping("/indexes")
 	public String indexes() {
 		return "db/indexes";

@@ -6,7 +6,7 @@ body, html {
 
 .content{
     min-width: 600px;
-    font-size: 25px;
+    font-size: 22px;
     display: block;
     position:fixed; /*FIXME absolute*/
     overflow-x: hidden;
@@ -85,4 +85,14 @@ details {
 
 summary {
     font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 4px;
 }
