@@ -27,11 +27,19 @@ details{
 }
 
 ul{
-    margin-top:-15px;
+    margin-top:0px;
+    margin-bottom:6px;
 }
 
 h2{
     text-align: center;
+    padding: 1px;
+    margin: 1px;
+}
+
+p {
+    padding: 3px;
+    margin: 3px;
 }
 
 td {
